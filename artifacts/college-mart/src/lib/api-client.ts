@@ -1,4 +1,4 @@
-import { setAuthTokenGetter } from "@workspace/api-client-react/src/custom-fetch";
+import { setAuthTokenGetter } from "@workspace/api-client-react";
 
 export function initApiClient() {
   setAuthTokenGetter(() => {
