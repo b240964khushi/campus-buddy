@@ -1,4 +1,4 @@
 {
   "installCommand": "cd ../.. && pnpm install --no-frozen-lockfile",
-  "rewrites": [{ "source": "/(.*)", "dest": "/api/index" }]
+  "rewrites": [{ "source": "/(.*)", "destination": "/api/index" }]
 }
