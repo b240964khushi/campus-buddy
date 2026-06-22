@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "College Mart"
+version = "1.0.0"
+id = "artifacts/college-mart"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 20135
+
+[services.development]
+run = "pnpm --filter @workspace/college-mart run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/college-mart", "run", "build" ]
+publicDir = "artifacts/college-mart/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "20135"
+BASE_PATH = "/"
