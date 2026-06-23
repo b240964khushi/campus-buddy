@@ -4,8 +4,6 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/not-found";
 import { AuthProvider } from "@/contexts/AuthContext";
-import { initApiClient } from "@/lib/api-client";
-
 // Pages
 import Landing from "@/pages/landing";
 import Register from "@/pages/register";
@@ -15,9 +13,6 @@ import Items from "@/pages/items";
 import UploadItem from "@/pages/upload-item";
 import PostDemand from "@/pages/post-demand";
 import Demands from "@/pages/demands";
-
-// Initialize API client interceptor
-initApiClient();
 
 const queryClient = new QueryClient({
   defaultOptions: {

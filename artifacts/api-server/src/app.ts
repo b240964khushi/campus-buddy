@@ -26,13 +26,7 @@ app.use(
     },
   }),
 );
-const allowedOrigin = process.env["FRONTEND_URL"];
-app.use(
-  cors({
-    origin: allowedOrigin ?? true,
-    credentials: true,
-  }),
-);
+app.use(cors({ origin: true, credentials: true }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
